@@ -8,7 +8,7 @@ function App() {
   const apiKey="8794527c75af42af740a272568e1f961";
 
   function getCoordinate(){
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${citta}&limit=&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${citta}&limit=&appid=${apiKey}`)
     .then(res=>res.json())
     .then(json=>{
         coordinate.current={lat:json[0].lat,lon:json[0].lon};
